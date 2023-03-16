@@ -19,12 +19,15 @@ Pod::Spec.new do |spec|
   spec.version      = "1.0.0"
   spec.summary      = "A short description of cocoapodsDEMO."
 
+  spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => ' ' } 
+
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+	这里要写很多的描述，描述要比summary的字数长度更多
                    DESC
 
   spec.homepage     = "https://github.com/StoneYuan/cocoapodsTest.git"
@@ -97,6 +100,11 @@ Pod::Spec.new do |spec|
 
   # SDK的路径 写上库的位置 (自动生成没有这一项，可以不写试一下)
   spec.vendored_frameworks = 'cocoaDemo/TestFramWork.framework'
+
+  # 依赖系统的一些库，有就写，没有就不要写 
+  # framework, frameworks：一个库就是用framework,多个库设置frameworks并使用,分割。
+  # library, libraries：同上，需要注意的是设置lib依赖库时，省略其名称的lib前缀，以及.后缀。如spec.library   = "iconv"
+  spec.frameworks = "Foundation"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
