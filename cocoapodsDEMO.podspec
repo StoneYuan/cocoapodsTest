@@ -30,7 +30,7 @@ Pod::Spec.new do |spec|
 	这里要写很多的描述，描述要比summary的字数长度更多
                    DESC
 
-  spec.homepage     = "https://github.com/StoneYuan/cocoapodsTest.git"
+  spec.homepage     = "https://github.com/StoneYuan/cocoapodsTest"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -93,13 +93,13 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "cocoaDemo/TestFramWork.framework/Headers/*.{h,m}"
+  spec.source_files  = "cocoaDemo/TestFramWork/Headers/*.{h,m}"
   #  spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
   # SDK的路径 写上库的位置 (自动生成没有这一项，可以不写试一下)
-  spec.vendored_frameworks = 'cocoaDemo/TestFramWork.framework'
+  #  spec.vendored_frameworks = 'cocoaDemo/TestFramWork.framework'
 
   # 依赖系统的一些库，有就写，没有就不要写 
   # framework, frameworks：一个库就是用framework,多个库设置frameworks并使用,分割。
