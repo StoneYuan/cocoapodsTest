@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   spec.version      = "1.0.0"
   spec.summary      = "A short description of cocoapodsDEMO."
 
-  spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => ' ','GENERATE_INFOPLIST_FILE' => 'YES' } 
+ # spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => ' ','GENERATE_INFOPLIST_FILE' => 'YES' } 
   
   spec.user_target_xcconfig = {
         'GENERATE_INFOPLIST_FILE' => 'YES'
@@ -97,13 +97,13 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "cocoaDemo/TestFramWork/Headers/*.h"
+  spec.source_files  = "cocoaDemo/Headers/*"
   #  spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
   # SDK的路径 写上库的位置 (自动生成没有这一项，可以不写试一下)
-  #  spec.vendored_frameworks = 'cocoaDemo/TestFramWork.framework'
+  # spec.vendored_frameworks = 'cocoaDemo/TestFramWork.framework'
 
   # 依赖系统的一些库，有就写，没有就不要写 
   # framework, frameworks：一个库就是用framework,多个库设置frameworks并使用,分割。
@@ -144,6 +144,9 @@ Pod::Spec.new do |spec|
   #  you can include multiple dependencies to ensure it works.
 
   # spec.requires_arc = true
+
+  # spec.xcconfig = {'VALID_ARCHS' => 'armv7 arm64e armv7s arm64' }
+
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
