@@ -19,7 +19,11 @@ Pod::Spec.new do |spec|
   spec.version      = "1.0.0"
   spec.summary      = "A short description of cocoapodsDEMO."
 
-  spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => ' ' } 
+  spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => ' ','GENERATE_INFOPLIST_FILE' => 'YES' } 
+  
+  spec.user_target_xcconfig = {
+        'GENERATE_INFOPLIST_FILE' => 'YES'
+    }
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -67,7 +71,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  spec.platform     = :ios, "10.0"
+  spec.platform     = :ios, "12.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -93,7 +97,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "cocoaDemo/TestFramWork/Headers/*.{h,m}"
+  spec.source_files  = "cocoaDemo/TestFramWork/Headers/*.h"
   #  spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
